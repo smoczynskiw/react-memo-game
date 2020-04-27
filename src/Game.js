@@ -7,8 +7,8 @@ import useSquares from './hooks/useSquares'
 
 function Game() {
   const [isBlocked, setIsBlocked] = useState(false)
-  const [isWinner, setIsWinner] = useState(false)
-  const [players, addPoint, toggleCurrentPlayer, restart] = usePlayers()
+  const [isFinished, setIsFinished] = useState(false)
+  const [players, addPoint, toggleCurrentPlayer, resetScore] = usePlayers()
   const [squares, resetSquares, chooseSquare, handleMatch, handleMismatch] = useSquares(gamePics)
 
   const style = {
@@ -36,16 +36,13 @@ function Game() {
       handleMismatch()
       toggleCurrentPlayer()
       setIsBlocked(false)
-    }, 700)
+    }, 800)
   }
 
   const reset = () => {
-    restart()
+    resetScore()
     resetSquares()
-  }
-
-  const handleWin = () => {
-    squares.every(sq => sq.isFaded === true) ? setIsWinner(true) : setIsWinner(false)
+    setIsFinished(false)
   }
 
   useEffect(() => {
@@ -53,12 +50,15 @@ function Game() {
     if (pair.length === 2) {
       pair[0].name === pair[1].name ? score(pair) : endTurn()
     }
-    handleWin()
   })
+
+  useEffect(() => {
+    squares.every(sq => sq.isFaded) && setIsFinished(true)
+  }, [squares])
 
   return (
     <>
-      <Menu handleRestart={reset} players={players} isWinner={isWinner} />
+      <Menu handleRestart={reset} players={players} isFinished={isFinished} />
       <div style={style}>
         {squares.map(pic => (
           <Square
