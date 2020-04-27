@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './Footer'
 
 function Menu({ players, handleRestart, isWinner }) {
 
@@ -8,8 +9,8 @@ function Menu({ players, handleRestart, isWinner }) {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: 40,
+    justifyContent: 'flex-start',
+    fontSize: 30,
     color: 'rgba(255,255,255,0.7)'
   }
 
@@ -52,6 +53,7 @@ function Menu({ players, handleRestart, isWinner }) {
         }}>
         Restart
       </button>
+      <Footer />
     </div >
   )
 }

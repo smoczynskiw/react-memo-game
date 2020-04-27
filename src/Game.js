@@ -36,7 +36,7 @@ function Game() {
       handleMismatch()
       toggleCurrentPlayer()
       setIsBlocked(false)
-    }, 1000)
+    }, 700)
   }
 
   const reset = () => {

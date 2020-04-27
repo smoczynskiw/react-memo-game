@@ -6,6 +6,7 @@ import pic5 from './pics/5.jpg'
 import pic6 from './pics/6.jpg'
 import pic7 from './pics/7.jpg'
 import pic8 from './pics/8.jpg'
+import faceDown from './pics/faceDown.jpg'
 import { v4 as uuid } from 'uuid'
 
 const pics = [
@@ -29,4 +30,5 @@ const pics = [
 
 const gamePics = pics.map(pic => ({ image: pic.image, name: pic.name, isFaceDown: true, id: uuid(), isFaded: false }))
 
+export { pics, faceDown }
 export default gamePics
