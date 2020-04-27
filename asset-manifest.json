@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/react-memo-game/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/react-memo-game/static/js/main.d65dbaae.chunk.js",
+    "main.js.map": "/react-memo-game/static/js/main.d65dbaae.chunk.js.map",
+    "runtime-main.js": "/react-memo-game/static/js/runtime-main.4bd1c060.js",
+    "runtime-main.js.map": "/react-memo-game/static/js/runtime-main.4bd1c060.js.map",
+    "static/js/2.150760b0.chunk.js": "/react-memo-game/static/js/2.150760b0.chunk.js",
+    "static/js/2.150760b0.chunk.js.map": "/react-memo-game/static/js/2.150760b0.chunk.js.map",
+    "index.html": "/react-memo-game/index.html",
+    "precache-manifest.78f9d040f619818b433fcefda55b073f.js": "/react-memo-game/precache-manifest.78f9d040f619818b433fcefda55b073f.js",
+    "service-worker.js": "/react-memo-game/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/react-memo-game/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.150760b0.chunk.js.LICENSE.txt": "/react-memo-game/static/js/2.150760b0.chunk.js.LICENSE.txt",
+    "static/media/1.jpg": "/react-memo-game/static/media/1.cd5f27f2.jpg",
+    "static/media/2.jpg": "/react-memo-game/static/media/2.32d87486.jpg",
+    "static/media/3.jpg": "/react-memo-game/static/media/3.baaa08e4.jpg",
+    "static/media/4.jpg": "/react-memo-game/static/media/4.9713d1f6.jpg",
+    "static/media/5.jpg": "/react-memo-game/static/media/5.8344ca5d.jpg",
+    "static/media/6.jpg": "/react-memo-game/static/media/6.81886094.jpg",
+    "static/media/7.jpg": "/react-memo-game/static/media/7.dd8cc4a0.jpg",
+    "static/media/8.jpg": "/react-memo-game/static/media/8.94eb3343.jpg",
+    "static/media/faceDown.jpg": "/react-memo-game/static/media/faceDown.f7583149.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4bd1c060.js",
+    "static/js/2.150760b0.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.d65dbaae.chunk.js"
+  ]
+}
