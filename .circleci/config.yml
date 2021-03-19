@@ -2,11 +2,15 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node:10.16-browsers
+      - image: cimg/node:15.11.0
+      - image: owasp/zap2docker-weekly
     working_directory: ~/react-memo-game
     steps:
       - checkout
       - run: yarn
       - run: yarn build
-      - run: sudo yarn global add @lhci/cli@0.4.x
-      - run: lhci autorun
+      - run: docker run -v $(pwd):/zap/wrk/:rw \
+	           owasp/zap2docker-weekly zap-baseline.py \
+	           -g baseline-scan.conf \
+	           -t http://$(ifconfig en0 | grep "inet " | cut -d " " -f2):3000 \
+             -r baseline-scan-report.html
