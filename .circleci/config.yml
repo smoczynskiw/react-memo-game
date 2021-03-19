@@ -3,7 +3,7 @@ machine: true
 jobs:
   run-audit:
     working_directory: ~/react-memo-game
-      steps:
+      steps: 
         - checkout
         - run: yarn
         - run: yarn build
