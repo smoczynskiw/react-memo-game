@@ -1,12 +1,8 @@
 version: 2.1
+machine: true
 jobs:
   run-audit:
-    build:
-      docker:
-        - image: cimg/node:15.11.0
-        - image: owasp/zap2docker-weekly
     working_directory: ~/react-memo-game
-    machine: true
       steps:
         - checkout
         - run: yarn
