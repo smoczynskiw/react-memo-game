@@ -1,5 +1,5 @@
 version: 2.1
-  working_directory: ~/react-memo-game
+# working_directory: ~/react-memo-game
 jobs:
   run-audit:
     machine: true
