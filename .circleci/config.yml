@@ -11,7 +11,7 @@ jobs:
       - run: yarn build
       - run: |
         docker run -v $(pwd):/zap/wrk/:rw \
-        owasp/zap2docker-weekly zap-baseline.py \
+        owasp/zap2docker-weekly:latest zap-baseline.py \
         -g baseline-scan.conf \
         -t http://$(ifconfig en0 | grep "inet " | cut -d " " -f2):3000 \
         -r baseline-scan-report.html
