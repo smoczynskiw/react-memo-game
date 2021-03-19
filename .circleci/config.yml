@@ -1,5 +1,4 @@
 version: 2.1
-jobs:
   machine: true
   build:
     docker:
