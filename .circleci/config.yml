@@ -1,8 +1,8 @@
 version: 2.1
-machine: true
   working_directory: ~/react-memo-game
 jobs:
   run-audit:
+    machine: true
     steps: 
       - checkout
       - run: yarn
