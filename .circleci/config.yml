@@ -3,14 +3,14 @@ machine: true
   working_directory: ~/react-memo-game
 jobs:
   run-audit:
-      steps: 
-        - checkout
-        - run: yarn
-        - run: yarn build
-        - run: 
-            name: Run audit - zap baseline
-            command: |
-              docker run --rm -v "$(pwd):/zap/wrk/:rw" owasp/zap2docker-weekly zap-baseline.py \
-              -g baseline-scan.conf \
-              -t http://$(ifconfig en0 | grep "inet " | cut -d " " -f2):3000 \
-              -r baseline-scan-report.html
+    steps: 
+      - checkout
+      - run: yarn
+      - run: yarn build
+      - run: 
+          name: Run audit - zap baseline
+          command: |
+            docker run --rm -v "$(pwd):/zap/wrk/:rw" owasp/zap2docker-weekly zap-baseline.py \
+            -g baseline-scan.conf \
+            -t http://$(ifconfig en0 | grep "inet " | cut -d " " -f2):3000 \
+            -r baseline-scan-report.html
